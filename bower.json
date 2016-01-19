@@ -15,8 +15,7 @@
   ],
   "license": "MIT",
   "ignore": [
-    "**/.json",
-    "gulpfile.js",
+    "**/.*",
     "node_modules",
     "bower_components",
     "tests"
