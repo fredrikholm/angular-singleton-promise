@@ -1,0 +1,23 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link rel="stylesheet" href="mocha/mocha.css" />
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="mocha/mocha.js"></script>
+  <script src="chai.js"></script>
+  <script>
+      mocha.setup('tdd');
+      var assert = chai.assert;
+  </script>
+  <script src="../dist/angular-singleton-promise.js"></script>
+  <script src="angular-singleton-promise.tests.js"></script>
+  <script>
+  	mocha.checkLeaks();
+  	mocha.globals(['angular']);
+  	mocha.run();
+  </script>
+</body>
+</html>

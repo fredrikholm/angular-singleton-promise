@@ -1,0 +1,27 @@
+{
+  "name": "angular-singleton-promise",
+  "version": "1.0.0",
+  "description": "Protects your asynchronous code against multiple identical requests.",
+  "main": "dist/angular-singleton-promise.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredrikholm/angular-singleton-promise.git"
+  },
+  "author": "Fredrik Holm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fredrikholm/angular-singleton-promise/issues"
+  },
+  "homepage": "https://github.com/fredrikholm/angular-singleton-promise#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1"
+  }
+}

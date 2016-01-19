@@ -1,0 +1,24 @@
+{
+  "name": "angular-singleton-promise",
+  "version": "1.0.0",
+  "homepage": "https://github.com/fredrikholm/angular-singleton-promise",
+  "authors": [
+    "<fredrik.holm <fredrik.holm@infolyzer.se>>"
+  ],
+  "description": "Protects your asynchronous code against multiple identical requests.",
+  "keywords": [
+    "promise",
+    "singleton",
+    "cache",
+    "subsequent",
+    "request"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.json",
+    "gulpfile.js",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ]
+}
