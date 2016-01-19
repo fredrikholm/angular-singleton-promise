@@ -16,7 +16,7 @@
   "license": "MIT",
   "ignore": [
     "*",
-    "!dist/",
+    "bower.json",
     "!dist/*",
     "!README.md"
   ]
