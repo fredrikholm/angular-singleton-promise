@@ -19,5 +19,8 @@
     "bower.json",
     "!dist/*",
     "!README.md"
-  ]
+  ],
+  "dependencies": {
+    "angular": "^1.2.28"
+  },
 }
