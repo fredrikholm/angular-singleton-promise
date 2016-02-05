@@ -1,5 +1,7 @@
 # angular-singleton-promise
-Protects your asynchronous code against multiple identical requests. Basically, what it does is to help you avoid constructs like this:
+Protects your asynchronous code against multiple identical requests. 
+
+Basically, what it does is to help you avoid constructs like this:
 
 ```javascript
 var customerSearchDeferred = null;
