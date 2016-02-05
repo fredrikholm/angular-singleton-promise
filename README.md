@@ -1,5 +1,5 @@
 # angular-singleton-promise
-Protects your asynchronous code against multiple identical requests. 
+An AngularJS service that protects your asynchronous code against multiple identical requests. 
 
 Basically, what it does is to help you avoid constructs like this:
 
@@ -13,7 +13,7 @@ function getCustomers(filter) {
     }
     customerSearchDeferred = $q.defer();
     customerSearchInProgress = true;
-    DataService.search("api/customers", filter)
+    DataService.search('api/customers', filter)
         .then(function (data) {
             customerSearchDeferred.resolve(data.results);
         })
@@ -34,7 +34,7 @@ function getCustomers(filter) {
         context: "customers",
         varyBy: filter,
         fn: function () {
-            return DataService.search("api/customers", filter);
+            return DataService.search('api/customers', filter);
         }
     });
 }
@@ -44,4 +44,20 @@ function getCustomers(filter) {
 Install via `bower`
 ```
 bower install angular-singleton-promise --save
+```
+
+##Usage
+Make sure you have loaded the necessary scripts in the correct order. Add angular-singleton-promise as a module dependency, like so:
+```javascript
+var app = angular('app', ['angular-singleton-promise']);
+```
+
+Then just inject the SingletonPromise service in your own service:
+
+```javascript
+angular
+    .module('app')
+    .service('DataService', DataService);
+
+DataService.$inject = ['SingletonPromise'];
 ```
