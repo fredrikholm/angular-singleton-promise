@@ -61,3 +61,9 @@ angular
 
 DataService.$inject = ['SingletonPromise'];
 ```
+
+##Configuration
+Behind the scenes, the SingletonPromise service caches the wrapped function using the string representation of the function itself as key. To make it more flexible (and to allow for identical functions in different contexts) the service provides a config object that takes two **optional** parameters:
+
+* `context`: a string value that gets prepended to the function signature to make the key unique
+* `varyBy`: an object that gets serialized and appended to the key
