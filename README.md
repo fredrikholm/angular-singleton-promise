@@ -24,6 +24,19 @@ function getCustomers(filter) {
     return customerSearchDeferred.promise;
 }
 ```
+...and instead use something like this:
+
+```javascript
+function getCustomers(filter) {
+    return SingletonPromise({
+        context: "customers",
+        varyBy: filter,
+        fn: function () {
+            return DataService.search("api/customers", filter);
+        }
+    });
+}
+```
 
 ##Installation
 Install via `bower`
